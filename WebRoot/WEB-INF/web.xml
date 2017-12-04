@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>struts1Login</display-name>
+  <welcome-file-list>
+     <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <description>ActionServlet 所有servlet请求入口，匹配所有.do请求，在系统启动时就初始化</description>
+    <servlet-name>ActionServlet</servlet-name>
+    <servlet-class>com.tz.jspstudy.framework.struts.servlet.ActionServlet</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActionServlet</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

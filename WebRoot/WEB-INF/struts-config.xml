@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts-config>
+	<!-- form-beans标签只有一个 -->
+	<form-beans>
+		<!-- form-bean标签有多个 -->
+		<form-bean name="loginForm" type="com.tz.jspstudy.sysmanage.formbean.LoginForm"/>
+	</form-beans>
+	
+	<!-- action-mappings标签只有一个 -->
+	<action-mappings>
+		<!-- 
+			action元素：配置业务Action类		
+			path : 请求的路径			
+			type ： 业务Action类的类路径		
+		 -->
+		<!-- action标签有多个 -->
+		<action path="/login" type="com.tz.jspstudy.sysmanage.action.LoginAction" name="loginForm"/>
+	</action-mappings>
+	
+</struts-config>
